@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8VF-cp-6x9">
+                                <rect key="frame" x="0.0" y="20" width="600" height="234"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Kf-6V-oEg">
+                                <rect key="frame" x="0.0" y="254" width="600" height="289"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="rPO-aG-FS9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="msc-KH-bby"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="aOL-z7-stt"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8N-sd-dR0">
+                                <rect key="frame" x="0.0" y="543" width="600" height="57"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="0.74329202586206899" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="J3f-nb-Umc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookLoginHasBeenClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lps-55-Z2y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Kf-6V-oEg" firstAttribute="top" secondItem="8VF-cp-6x9" secondAttribute="bottom" id="3U0-Bf-iOn"/>
+                            <constraint firstItem="u8N-sd-dR0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IOn-qV-hkR"/>
+                            <constraint firstItem="1Kf-6V-oEg" firstAttribute="leading" secondItem="8VF-cp-6x9" secondAttribute="leading" id="V6P-hy-Mzn"/>
+                            <constraint firstItem="8VF-cp-6x9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VAp-dM-8iC"/>
+                            <constraint firstItem="1Kf-6V-oEg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Z4a-0A-Lfw"/>
+                            <constraint firstAttribute="trailing" secondItem="1Kf-6V-oEg" secondAttribute="trailing" id="buz-KC-afl"/>
+                            <constraint firstItem="u8N-sd-dR0" firstAttribute="top" secondItem="1Kf-6V-oEg" secondAttribute="bottom" id="h95-93-gUq"/>
+                            <constraint firstItem="u8N-sd-dR0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="387" id="hbO-8z-ObG"/>
+                            <constraint firstItem="u8N-sd-dR0" firstAttribute="leading" secondItem="1Kf-6V-oEg" secondAttribute="leading" id="j5W-7J-dZn"/>
+                            <constraint firstItem="u8N-sd-dR0" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="jG4-ni-oOb"/>
+                            <constraint firstAttribute="trailing" secondItem="8VF-cp-6x9" secondAttribute="trailing" id="rrP-kl-QNG"/>
+                            <constraint firstItem="8VF-cp-6x9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rs4-t2-3a1"/>
+                            <constraint firstItem="u8N-sd-dR0" firstAttribute="trailing" secondItem="1Kf-6V-oEg" secondAttribute="trailing" id="sFX-zv-dJY"/>
+                            <constraint firstAttribute="trailing" secondItem="u8N-sd-dR0" secondAttribute="trailing" id="tLF-Vj-aEv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Z4a-0A-Lfw"/>
+                                <exclude reference="hbO-8z-ObG"/>
+                                <exclude reference="j5W-7J-dZn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="facebookLogin" destination="u8N-sd-dR0" id="OBo-s4-rjq"/>
+                        <outlet property="facebookPicture" destination="8VF-cp-6x9" id="jVc-bY-HdU"/>
+                        <outlet property="tableview" destination="1Kf-6V-oEg" id="UqL-PH-W4C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-240" y="166"/>
+        </scene>
+    </scenes>
+</document>
